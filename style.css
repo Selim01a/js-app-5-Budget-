@@ -1,0 +1,260 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed';
+    
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #3d3d77d7;
+}
+body::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgb(203, 206, 30),rgba(255, 0, 255, 0.4));
+    clip-path: circle(30% at right 40%);
+}
+body::after
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#45d4eda4,#ddff00cb);
+    clip-path: circle(30% at left 60% );
+}
+h3
+{
+    position: absolute;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    color: #fff;
+    font-size: 3em;
+    margin-top: -600px;
+    margin-right: -120px;
+
+}
+.container
+{
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin-top: -400px;
+    
+}
+.container .content
+{
+    position: relative;
+    width: 400px;
+    height: 60px;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    display: flex;
+     /* justify-content: center; */
+    align-items: center; 
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(2px);
+    
+}
+.action
+{
+    width: 120px;
+    height: 30px;
+    margin-left: 12px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background: rgba(0, 0, 0, 0.748);
+    color: rgb(255, 204, 0);
+    font-weight: 400;
+    font-size: 1.5em;
+}
+.action:focus , .price:focus
+{
+    background: rgba(0, 0, 0, 0.318);
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.price
+{
+    width: 120px;
+    height: 30px;
+    margin-left: 12px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background: rgba(0, 0, 0, 0.748);
+    color: rgb(167, 81, 34);
+    font-weight: 200;
+    font-size: 1.5em;
+}
+
+.income
+{
+    height: 30px;
+    width: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 10px;
+    transition: 0.7s;
+    border-right: none;
+    border-bottom: none;
+}
+
+.expense
+{
+    height: 30px;
+    width: 30px;
+    border-radius: 10px;
+    transition: 0.7s;
+    border: none;
+    border-right: none;
+    border-bottom: none;
+}
+
+.income:hover
+{
+    transform: rotate(360deg) scale(1.5);
+    font-size: 1.25em;
+    background: rgba(74, 255, 3, 0.713);
+    color: #fff;
+    cursor: pointer;
+}
+.expense:hover
+{
+    transform: rotate(360deg) scale(1.5);
+    font-size: 1.25em;
+    color: #fff;
+    background: rgba(247, 4, 4, 0.713);
+    cursor:pointer ;
+}
+.incomes
+{
+    position: relative;
+    width: 250px;
+    height: 300px;
+    background: rgba(74, 255, 3, 0.310);
+
+    margin-left: -500px;
+    margin-top: 500px;
+    border-radius: 10%;
+    overflow: hidden;
+    display: flex;
+
+}
+
+.incomes ul li 
+{
+    color: #fff;
+    margin-top: 20px;
+    margin-left: 20px;
+    overflow: hidden;
+    font-size: 1.25em;
+    font-weight: 300;
+}
+.expenses
+{
+    position: relative;
+    width: 250px;
+    height: 300px;
+    background: rgba(247, 4, 4, 0.310);
+    margin-left: 100px;
+    margin-top: 500px;
+    border-radius: 10%;
+    overflow: hidden;
+    display: flex;
+}
+.expenses ul li 
+{
+    color: #fff;
+    margin-top: 20px;
+    margin-left: 20px;
+    overflow: hidden;
+    font-size: 1.25em;
+    font-weight: 300;
+}
+
+.net
+{
+    position: relative;
+    margin-top: 900px;
+    margin-left: -395px;
+    background: rgba(255, 0, 255, 0.4);
+    width: 220px;
+    height: 40px;
+    border-radius: 15px;
+    font-size: 1.5em;
+    text-align: left;
+    padding: 5px;
+    color: #fff;
+}
+p
+{
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    border: none;
+    background: none;
+    outline: none;
+    margin-top: -27px;
+    margin-left: 155px;
+}
+.calc
+{
+    position: absolute;
+    margin-top: 900px;
+    margin-left: 430px;
+    font-size: 1.10em;
+    border-radius: 10px;
+    font-style: italic;
+    background: rgb(216, 204, 223);
+    cursor: pointer;
+    padding: 5px;
+    transition: 1.5s;
+}
+.calc:hover
+{
+    transform: scaleY(1.25);
+    
+}
+.calc:active
+{
+    background: rgba(255, 255, 255, 0.5);
+    color: black;
+    font-weight: 400;
+}
+
+
+
+
+
+
+
+
+
+
